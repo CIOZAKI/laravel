@@ -46,6 +46,18 @@ return [
             'provider' => 'users',
             'hash' => false,
         ],
+        'artists' => [
+            'driver' => 'session',
+            'provider' => 'aritists',
+        ],
+        'collectors' => [
+            'driver' => 'session',
+            'provider' => 'collectors',
+        ],
+        'galleries' => [
+            'driver' => 'session',
+            'provider' => 'galleries',
+        ]
     ],
 
     /*
@@ -69,6 +81,20 @@ return [
         'users' => [
             'driver' => 'eloquent',
             'model' => App\Models\User::class,
+        ],
+        
+        'artists' => [
+            'driver' => 'eloquent',
+            'provider' => App\Models\artist::class,
+        ],
+        'collectors' => [
+            'driver' => 'eloquent',
+            'provider' => App\Models\collector::class,
+        ],
+        'galleries' => [
+            'driver' => 'eloquent',
+            'provider' => App\Models\gallery::class,
+
         ],
 
         // 'users' => [
